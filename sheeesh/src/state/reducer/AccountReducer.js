@@ -3,7 +3,7 @@ const reducer = (state = null, action) =>{
     switch(action.type){
 
         case "login":
-            return "HardCoded";
+            return action.payload;
             break;
         case "logout":
             return null;
