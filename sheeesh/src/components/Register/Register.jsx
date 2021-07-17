@@ -11,15 +11,41 @@ const Register = ()=> {
     const [Password, SetPassword] = useState("");
     const [Password2, SetPassword2] = useState("");
 
+
+    // register functions
     const registerAccount = async (e)=>{
 
         e.preventDefault()
 
-        console.log("Username " + Username);
-        console.log("Password " + Password);
-        console.log("Password2 " + Password2);
+        // check if re-typed password is same with the first passowrd
+        if(Password != Password2){
 
-        history.push("/login")
+            window.alert("password must be the same")
+            return null;
+        }
+
+        // create payload so we can send to the api
+        const payload = {
+            "username": Username,
+            "pwd": Password
+        }
+
+
+        const res = await fetch("/users/", 
+        {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(payload)
+        });
+
+        const content = await res.json();
+
+        if(content.id != null || content.id != undefined){
+            history.push("/login")
+        } else{
+            window.alert("Something went wrong")
+            return null;
+        }
 
     }
 
@@ -36,14 +62,13 @@ const Register = ()=> {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control type="password" placeholder="PASSWORD" onChange={(e)=>{SetPassword(e.target.value)}} />
-                <Form.Control type="password2" placeholder="CONFIRM PASSWORD" onChange={(e)=>{SetPassword2(e.target.value)}} />
+                <Form.Control type="password" placeholder="CONFIRM PASSWORD" onChange={(e)=>{SetPassword2(e.target.value)}} />
             </Form.Group>
             <Button className="btnlogin" variant="dark" type="submit">
                 REGISTER
             </Button>
             </Form>
             </div>
-
 
         </div>
         )
