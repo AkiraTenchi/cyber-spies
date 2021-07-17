@@ -1,11 +1,19 @@
 import React, {useState} from 'react';
 import { useHistory } from "react-router-dom";
 import {Form, Button} from "react-bootstrap";
+import { bindActionCreators } from "redux";
+import { useDispatch } from "react-redux";
+import { actionCreators } from "../../state";
 import './Login.css';
 
 
 
 const Login = ()=> {
+
+    const dispatch = useDispatch()
+  
+    const {login} = bindActionCreators(actionCreators, dispatch)
+
     const history = useHistory();
 
     const [Username, SetUsername] = useState("");
@@ -15,8 +23,27 @@ const Login = ()=> {
 
         e.preventDefault();
 
-        console.log("Username " + Username);
-        console.log("Password " + Password);
+        const res = await fetch("/users/"+Username, 
+        {
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        });
+
+        const content = await res.json();
+        
+        // just checking if we got proper reply and then compare password with backends reply
+        const success = (content.pwd != null && content.pwd != undefined) && (content.pwd == Password)
+
+        if(success){
+            login({
+                "Username":Username
+            })
+            history.push("/")
+        } else{
+            window.alert("Something went wrong, or user does not exist, or passwrod is wrong")
+            return null;
+        }
+
     }
 
 
