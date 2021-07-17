@@ -26,9 +26,9 @@ public class UserController {
         return userRepo.findAll();
     }
 
-    @GetMapping("/{id}")
-    public User getUser(@PathVariable Long id){
-        return userRepo.findById(id).orElseThrow(RuntimeException::new);
+    @GetMapping("/{username}")
+    public User getUserByName(@PathVariable String username){
+        return userRepo.findById(username).orElseThrow(RuntimeException::new);
     }
 
     @PostMapping
@@ -37,9 +37,9 @@ public class UserController {
         return ResponseEntity.created(new URI("/users/" + savedUser.getId())).body(savedUser);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User user){
-        User curUser = userRepo.findById(id).orElseThrow(RuntimeException::new);
+    @PutMapping("/{username}")
+    public ResponseEntity updateUser(@PathVariable String username, @RequestBody User user){
+        User curUser = userRepo.findById(username).orElseThrow(RuntimeException::new);
         curUser.setUsername(user.getUsername());
         curUser.setPwd(user.getPwd());
         curUser = userRepo.save(curUser);
@@ -47,10 +47,11 @@ public class UserController {
         return ResponseEntity.ok(curUser);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity deleteClient(@PathVariable Long id){
-        userRepo.deleteById(id);
+    @DeleteMapping("/{username}")
+    public ResponseEntity deleteClient(@PathVariable String username){
+        userRepo.deleteById(username);
         return ResponseEntity.ok().build();
     }
+
 
 }
