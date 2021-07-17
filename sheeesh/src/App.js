@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Link, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch, Redirect} from "react-router-dom";
 import { bindActionCreators } from "redux";
 import { useSelector, useDispatch } from "react-redux";
 import './App.css';
