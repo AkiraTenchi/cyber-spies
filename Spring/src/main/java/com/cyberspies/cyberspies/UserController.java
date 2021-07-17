@@ -34,7 +34,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity createUser(@RequestBody User user) throws URISyntaxException, ParseException {
         User savedUser = userRepo.save(user);
-        return ResponseEntity.created(new URI("/users/" + savedUser.getId())).body(savedUser);
+        return ResponseEntity.created(new URI("/users/" + savedUser.getUsername())).body(savedUser);
     }
 
     @PutMapping("/{username}")
