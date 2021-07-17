@@ -1,9 +1,7 @@
 package com.cyberspies.cyberspies.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -13,6 +11,8 @@ public class User {
     private String username;
     private String pwd;
     private Long coins;
+    @OneToMany
+    private List<RewardVoucher> rewardsVouchers;
 
     public String getUsername() {
         return username;
@@ -36,6 +36,14 @@ public class User {
 
     public void setCoins(Long coins) {
         this.coins = coins;
+    }
+
+    public List<RewardVoucher> getRewardsVouchers() {
+        return rewardsVouchers;
+    }
+
+    public void setRewardsVouchers(List<RewardVoucher> rewardsVouchers) {
+        this.rewardsVouchers = rewardsVouchers;
     }
 
     public User() {

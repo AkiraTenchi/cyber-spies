@@ -25,3 +25,9 @@ POST http://localhost:8080/users/ Content-Type "application/json" {username: "us
 PUT http://localhost:8080/users/{id} Content-Type "application/json" {username: "username", pwd: "pwd"} -> modify user with id    
 
 DELETE http://localhost:80890/users/{id} -> Deletes user with ID   
+
+
+### Example curl calls 
+
+# Adding new user
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/users -d '{"username": "JohnDoe", "pwd": "test", "coins": 12}'  
