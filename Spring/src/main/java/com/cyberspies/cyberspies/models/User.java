@@ -12,6 +12,7 @@ public class User {
     @Id
     private String username;
     private String pwd;
+    private Long coins;
 
     public String getUsername() {
         return username;
@@ -27,6 +28,14 @@ public class User {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
+    }
+
+    public Long getCoins() {
+        return coins;
+    }
+
+    public void setCoins(Long coins) {
+        this.coins = coins;
     }
 
     public User() {

@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.sql.ClientInfoStatus;
 import java.text.ParseException;
 import java.util.List;
 
@@ -37,13 +36,21 @@ public class UserController {
         return ResponseEntity.created(new URI("/users/" + savedUser.getUsername())).body(savedUser);
     }
 
+    @PostMapping("/{username}/addcoins")
+    public ResponseEntity addCoins(@PathVariable String username, @RequestBody int amount){
+        User curUser = userRepo.findById(username).orElseThrow(RuntimeException::new);
+        curUser.setCoins(curUser.getCoins() + amount);
+        curUser = userRepo.save(curUser);
+        return ResponseEntity.ok(curUser);
+    }
+
     @PutMapping("/{username}")
     public ResponseEntity updateUser(@PathVariable String username, @RequestBody User user){
         User curUser = userRepo.findById(username).orElseThrow(RuntimeException::new);
         curUser.setUsername(user.getUsername());
         curUser.setPwd(user.getPwd());
+        curUser.setCoins(user.getCoins());
         curUser = userRepo.save(curUser);
-
         return ResponseEntity.ok(curUser);
     }
 
