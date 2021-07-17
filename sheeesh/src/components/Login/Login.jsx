@@ -36,7 +36,7 @@ const Login = ()=> {
 
         if(success){
             login({
-                "Username":Username
+                "username":Username
             })
             history.push("/")
         } else{
