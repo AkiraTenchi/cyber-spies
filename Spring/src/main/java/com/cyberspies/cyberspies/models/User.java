@@ -1,6 +1,7 @@
 package com.cyberspies.cyberspies.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,8 +12,8 @@ public class User {
     private String username;
     private String pwd;
     private Long coins;
-    @OneToMany
-    private List<RewardVoucher> rewardsVouchers;
+    @OneToMany( cascade = {CascadeType.ALL})
+    private List<RewardVoucher> rewardsVouchers = new ArrayList<RewardVoucher>();
 
     public String getUsername() {
         return username;

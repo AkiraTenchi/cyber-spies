@@ -34,3 +34,7 @@ curl -X POST -H "Content-Type: application/json" http://localhost:8080/users -d 
 
 # Adding coins
 curl -X POST -H "Content-Type: application/json" http://localhost:8080/users/JohnDoe/addcoins -d 12
+
+# Adding a Voucher
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/users/JohnDoe/vouchers/add -d '{"imageUrl": "test", "name": "voucher", "description": "does litterally nothing"
+, "linkUrl": "yes"}'

@@ -51,6 +51,16 @@ public class UserController {
         return ResponseEntity.ok(curUser);
     }
 
+    @PostMapping("/{username}/vouchers/add")
+    public ResponseEntity addVoucher(@PathVariable String username, @RequestBody RewardVoucher voucher){
+        User curUser = userRepo.findById(username).orElseThrow(RuntimeException::new);
+        var voucherList = curUser.getRewardsVouchers();
+        voucherList.add(voucher);
+        curUser.setRewardsVouchers(voucherList);
+        curUser = userRepo.save(curUser);
+        return ResponseEntity.ok(curUser);
+    }
+
     @PutMapping("/{username}")
     public ResponseEntity updateUser(@PathVariable String username, @RequestBody User user){
         User curUser = userRepo.findById(username).orElseThrow(RuntimeException::new);
