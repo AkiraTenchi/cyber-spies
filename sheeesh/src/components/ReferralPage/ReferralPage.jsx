@@ -49,7 +49,7 @@ const ReferralPage = ()=> {
         });
 
         update()
-        history.push("/")
+        history.push("/referral")
 
     }
 
