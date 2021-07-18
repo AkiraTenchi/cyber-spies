@@ -1,5 +1,6 @@
 package com.cyberspies.cyberspies;
 
+import com.cyberspies.cyberspies.models.RewardVoucher;
 import com.cyberspies.cyberspies.models.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +29,12 @@ public class UserController {
     @GetMapping("/{username}")
     public User getUserByName(@PathVariable String username){
         return userRepo.findById(username).orElseThrow(RuntimeException::new);
+    }
+
+    @GetMapping("/{username}/vouchers")
+    public List<RewardVoucher> getVouchers(@PathVariable String username){
+        User user = userRepo.findById(username).orElseThrow(RuntimeException::new);
+        return user.getRewardsVouchers();
     }
 
     @PostMapping
