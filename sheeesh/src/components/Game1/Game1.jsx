@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 import { useHistory } from "react-router-dom";
 import { Context, SnakeGame } from "react-game-snake";
 import NavBar from '../NavBar/NavBar';
+import { useEffect } from "react";
 
 const Game1 = ()=>{
 
@@ -41,7 +42,7 @@ const Game1 = ()=>{
         }}
         countOfHorizontalFields={20}
         countOfVerticalFields={20}
-        fieldSize={20}
+        fieldSize={40}
         loopTime={100}
         pauseAllowed={false}
         restartAllowed={false}

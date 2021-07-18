@@ -36,7 +36,7 @@ const MinigamesPage = ()=> {
             });
 
             update()
-            history.push("/game1")
+            window.open("/game1", "_blank")
 
         } else
         {
