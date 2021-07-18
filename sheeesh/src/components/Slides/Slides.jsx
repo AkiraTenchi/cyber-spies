@@ -19,7 +19,7 @@ const Slides = (props)=> {
             <img style={{height:"50vh", margin: "auto", cursor: "pointer"}}
             onClick={props.imgClicked}
             className="d-block"
-            src={item.img}
+            src={item.imageUrl}
             alt="First slide"
 
             />
@@ -27,7 +27,7 @@ const Slides = (props)=> {
             <Carousel.Caption>
             <div className="shadowBg">
                 <h5  >{item.name}</h5>
-                <p >{item.dis}</p>
+                <p >{item.description}</p>
             </div>
             </Carousel.Caption>
 

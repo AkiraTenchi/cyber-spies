@@ -33,7 +33,7 @@ const HomePage = ()=> {
             </div>
             
             <h1>Current Rewards</h1>
-            <Slides/>
+            <Slides items={state.account.rewardsVouchers}/>
 
         </div>
         )

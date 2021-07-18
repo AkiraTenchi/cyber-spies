@@ -23,18 +23,18 @@ const ReferralPage = ()=> {
     const items = [
         {
             "name": "Playstaion 5",
-            "dis": "Rare item, in current times",
-            "img": ps5Img
+            "description": "Rare item, in current times",
+            "imageUrl": ps5Img
         },
         {
             "name": "Xbox",
-            "dis": "Console made by 4 squares",
-            "img": xboxImg
+            "description": "Console made by 4 squares",
+            "imageUrl": xboxImg
         },
         {
             "name": "3090 gpu",
-            "dis": "Mythological creatures that doesn't exist",
-            "img": img3090
+            "description": "Mythological creatures that doesn't exist",
+            "imageUrl": img3090
         }
     ]
 
