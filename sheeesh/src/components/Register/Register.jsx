@@ -49,7 +49,8 @@ const Register = ()=> {
         // create payload so we can send to the api
         const payload = {
             "username": Username,
-            "pwd": Password
+            "pwd": Password,
+            "coins": 0
         }
 
         // register user

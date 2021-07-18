@@ -36,7 +36,9 @@ const Login = ()=> {
 
         if(success){
             login({
-                "username":Username
+                "username": content.username,
+                "coins": content.coins,
+                "rewardsVouchers": content.rewardsVouchers
             })
             history.push("/")
         } else{
