@@ -1,0 +1,7 @@
+.shadowBg{
+    background-color: rgba(0, 0, 0, 0.582);
+    width: fit-content;
+    margin: auto;
+    padding: 9px;
+    border-radius: 5px;
+}

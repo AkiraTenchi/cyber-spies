@@ -8,6 +8,9 @@ const reducer = (state = null, action) =>{
         case "logout":
             return null;
             break;
+        case "update":
+            return action.payload;
+            break;
         default:
             return state;
             break;

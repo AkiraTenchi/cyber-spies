@@ -11,11 +11,33 @@ const Register = ()=> {
     const [Password, SetPassword] = useState("");
     const [Password2, SetPassword2] = useState("");
 
+    function hasWhiteSpace(s) {
+        return /\s/g.test(s);
+      }
+
 
     // register functions
     const registerAccount = async (e)=>{
 
         e.preventDefault()
+        
+        if(hasWhiteSpace(Username)){
+            window.alert("No white spaces allowed on username")
+            return null;
+        }
+        // check if user exist
+        const checkUserExistRes = await fetch("/users/"+Username, 
+        {
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        });
+
+        const UserExistContent = await checkUserExistRes.json();
+        // alert if user does exist
+        if(UserExistContent.username == Username){
+            window.alert("username is already taken")
+            return null;
+        }
 
         // check if re-typed password is same with the first passowrd
         if(Password != Password2){
@@ -27,10 +49,11 @@ const Register = ()=> {
         // create payload so we can send to the api
         const payload = {
             "username": Username,
-            "pwd": Password
+            "pwd": Password,
+            "coins": 0
         }
 
-
+        // register user
         const res = await fetch("/users/", 
         {
             method: "POST",
@@ -40,7 +63,7 @@ const Register = ()=> {
 
         const content = await res.json();
 
-        if(content.id != null || content.id != undefined){
+        if(content.username != null || content.username != undefined){
             history.push("/login")
         } else{
             window.alert("Something went wrong")

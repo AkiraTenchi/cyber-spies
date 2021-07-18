@@ -1,5 +1,6 @@
 package com.cyberspies.cyberspies;
 
+import com.cyberspies.cyberspies.models.RewardVoucher;
 import com.cyberspies.cyberspies.models.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +31,12 @@ public class UserController {
         return userRepo.findById(username).orElseThrow(RuntimeException::new);
     }
 
+    @GetMapping("/{username}/vouchers")
+    public List<RewardVoucher> getVouchers(@PathVariable String username){
+        User user = userRepo.findById(username).orElseThrow(RuntimeException::new);
+        return user.getRewardsVouchers();
+    }
+
     @PostMapping
     public ResponseEntity createUser(@RequestBody User user) throws URISyntaxException, ParseException {
         User savedUser = userRepo.save(user);
@@ -40,6 +47,16 @@ public class UserController {
     public ResponseEntity addCoins(@PathVariable String username, @RequestBody int amount){
         User curUser = userRepo.findById(username).orElseThrow(RuntimeException::new);
         curUser.setCoins(curUser.getCoins() + amount);
+        curUser = userRepo.save(curUser);
+        return ResponseEntity.ok(curUser);
+    }
+
+    @PostMapping("/{username}/vouchers/add")
+    public ResponseEntity addVoucher(@PathVariable String username, @RequestBody RewardVoucher voucher){
+        User curUser = userRepo.findById(username).orElseThrow(RuntimeException::new);
+        var voucherList = curUser.getRewardsVouchers();
+        voucherList.add(voucher);
+        curUser.setRewardsVouchers(voucherList);
         curUser = userRepo.save(curUser);
         return ResponseEntity.ok(curUser);
     }

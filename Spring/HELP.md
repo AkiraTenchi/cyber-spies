@@ -31,3 +31,10 @@ DELETE http://localhost:80890/users/{id} -> Deletes user with ID
 
 # Adding new user
 curl -X POST -H "Content-Type: application/json" http://localhost:8080/users -d '{"username": "JohnDoe", "pwd": "test", "coins": 12}'  
+
+# Adding coins
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/users/JohnDoe/addcoins -d 12
+
+# Adding a Voucher
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/users/JohnDoe/vouchers/add -d '{"imageUrl": "test", "name": "voucher", "description": "does litterally nothing"
+, "linkUrl": "yes"}'
