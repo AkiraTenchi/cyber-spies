@@ -11,8 +11,6 @@ import xboxImg from '../../images/xbox.jpg';
 import img3090 from '../../images/3090.png';
 
 
-
-
 const ReferralPage = ()=> {
     const history = useHistory()
     const state = useSelector((state)=>state)

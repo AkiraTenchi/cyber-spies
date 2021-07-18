@@ -4,17 +4,17 @@ import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state';
 import ReactDOM from 'react-dom';
 import { Card, Button } from 'react-bootstrap';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch,useHistory } from "react-router-dom";
 import './MinigamesPage.css';
 import NavBar from '../NavBar/NavBar';
 import Slides from '../Slides/Slides';
 import playImg from "../../images/play.png";
-import wheelImg from "../../images/wheel.png";
+import image8 from "../../images/image8.png";
 
 
 
 const MinigamesPage = ()=> {
-
+    const history = useHistory()
     const state = useSelector((state)=>state)
     const dispatch = useDispatch()
 
@@ -36,6 +36,7 @@ const MinigamesPage = ()=> {
             });
 
             update()
+            history.push("/game1")
 
         } else
         {
@@ -50,11 +51,11 @@ const MinigamesPage = ()=> {
             <h1>minigames</h1>
 
             <Card style={{ width: '18rem', margin:"auto", borderRadius: "5px"}}>
-            <Card.Img variant="top" src={wheelImg} />
+            <Card.Img variant="top" src={image8} />
             <Card.Body>
-                <Card.Title> Fortune wheel - 25 Points</Card.Title>
+                <Card.Title> Snake - 25 Points</Card.Title>
                 <Card.Text>
-                    Try your luck
+                    Get 2 points and win a reward
                 </Card.Text>
                 <Button onClick={playMinGame} style={{padding: "0", margin: "0"}} variant="primary"><img src={playImg} style={{maxWidth: "50%"}}></img></Button>
             </Card.Body>

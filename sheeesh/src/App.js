@@ -13,6 +13,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import { stat } from "fs";
+import Game1 from "./components/Game1/Game1";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" exact component={()=> { return (state.account? <HomePage/>:<Redirect to="/login"/>)}} />
           <Route path="/referral" exact component={()=> { return (state.account? <ReferralPage/>:<Redirect to="/login"/>)}} />
           <Route path="/minigames" exact component={()=> { return (state.account? <MinigamesPage/>:<Redirect to="/login"/>)}} />
+          <Route path="/game1" exact component={()=> { return (state.account? <Game1/>:<Redirect to="/login"/>)}} />
           <Route path="/rewards" exact component={()=> { return (state.account? <RewardPage/>:<Redirect to="/login"/>)}} />
           <Route path="/login" exact component={()=> { return (!state.account? <Login/>:<Redirect to="/"/>)}}/>
           <Route path="/register" exact component={()=> { return (!state.account? <Register/>:<Redirect to="/"/>)}}/>
