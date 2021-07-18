@@ -11,11 +11,11 @@ const Game1 = ()=>{
 
 
     const win= ()=>{
-        history.push("/rewards")
+        window.open("/rewards", "_blank")
     }
 
     const lose= ()=>{
-        history.push("/")
+        window.open("/", "_blank")
     }
 
     const checkPoints = (points)=>{
