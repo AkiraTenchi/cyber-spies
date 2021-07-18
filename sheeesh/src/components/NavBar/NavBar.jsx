@@ -17,7 +17,7 @@ const NavBar = ()=> {
     const state = useSelector((state)=>state)
     const dispatch = useDispatch()
 
-    const {logout} = bindActionCreators(actionCreators, dispatch)
+    const {logout, update} = bindActionCreators(actionCreators, dispatch)
 
 
     const onLogOut = ()=>{
@@ -40,11 +40,11 @@ const NavBar = ()=> {
                             <img src={profileImg} alt="profile icon" />
                     </Nav.Item>
                     <Nav.Item style={{display: "flex", alignItems: "center", justifyContent: "center"}} >
-                            <h5 className="points">Points</h5>
+                            <h5 className="points">Points {state.account.coins}</h5>
                     </Nav.Item>
                 </Nav>
                 <Nav >
-                    <Nav.Link className="redirBtn" href="#home">Referral Links</Nav.Link>
+                    <Nav.Link className="redirBtn" href="/referral">Referral Links</Nav.Link>
                     <Nav.Link className="redirBtn" href="#features">Minigames</Nav.Link>
                 </Nav>
                 <Nav >
