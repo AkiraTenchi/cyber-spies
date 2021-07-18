@@ -1,0 +1,68 @@
+# Starting compiling UnityEngine.TestRunner.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-04eac8b4852d4764394da2615637964e
+# Starting compiling UnityEngine.UI.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-0e432324a7d552e4897162240b55d014
+# Starting compiling UnityEditor.TestRunner.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-0b4946411b16ce64cb784a19da847531
+# Starting compiling UnityEditor.UI.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-135f57c515eada345ac13ef94584be23
+# Starting compiling Unity.InternalAPIEngineBridge.001.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-bd99cadfd6bb6554fa5071ce2ec19ab1
+# Starting compiling Unity.VSCode.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-8837159221e8e5e49aae72dfef243546
+# Starting compiling Unity.2D.PixelPerfect.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-51e6504dfc6bf7741a787659bfc74cde
+# Starting compiling Unity.2D.Tilemap.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-063fe46f01ea4f84e83486cbd2928861
+# Starting compiling PsdPlugin.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-d5f9dda1e316202469c381742fede764
+# Starting compiling Unity.VisualStudio.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-d348d1f96264ff04fbf28de3fdc5cbcc
+# Starting compiling Unity.Timeline.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-21f07a4c94e3ba749bcb17d2d7e29e98
+# Starting compiling Unity.TextMeshPro.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-92da7035acbdeb046b663103f9cf9e9d
+# Starting compiling Unity.2D.Sprite.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-7371f23b098f4034db2588addb76a26b
+# Starting compiling Unity.2D.Path.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-10bce3d75c3d319448b502ac2c33bac2
+# Starting compiling Unity.PlasticSCM.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-877bed813fbabfc4ba756add7e21bd0f
+# Starting compiling Unity.Rider.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-4122e8deaddba27498af5fcafa646a89
+# Starting compiling Unity.Mathematics.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-a7fdcb30b4cf27a41bbf6264eb0ec59e
+# Starting compiling Unity.2D.IK.Runtime.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-5a113e9aece47264f84cbc277d8b0437
+# Starting compiling Unity.2D.Animation.Triangle.Runtime.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-4dec6932584650e49aec7026e9061201
+# Starting compiling Unity.2D.PixelPerfect.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-4aa110e90a47e5f48aeefd93778ba9d0
+# Starting compiling Unity.CollabProxy.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-ed67d01d59f9dc64ab74b7293f885f0f
+# Starting compiling Unity.Timeline.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-f658a89b17051e241b6836287f241be0
+# Starting compiling Unity.2D.Common.Runtime.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-6af8b9015a119144bb63ddf214d5a584
+# Starting compiling Unity.InternalAPIEditorBridge.001.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-05c75fc365165af44a24dcd3cb438a67
+# Starting compiling Unity.TextMeshPro.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-cd51e3b58c2f87f4ba932b8602f41b99
+# Starting compiling Unity.2D.Common.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-7b5a493b8dc2deb4f88cf3a2fc8d5aed
+# Starting compiling Unity.2D.Animation.Runtime.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-021c795394548704f8f71bae63c781dd
+# Starting compiling Unity.Mathematics.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-622c2dcf2bf47114783f809a57e8edf5
+# Starting compiling Unity.2D.SpriteShape.Runtime.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-39174cfd48fd9784e8536139a489f816
+# Starting compiling Unity.2D.Animation.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-fd0626efcb642cb4caeeb89da4387b57
+# Starting compiling Unity.2D.SpriteShape.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-7844c76d2fd94234da452ea5cabb40ac
+# Starting compiling Unity.2D.IK.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-da91579af306fc94fb3899da11e92f0d
+# Starting compiling Unity.2D.Psdimporter.Editor.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-db461277714563d40bfd04ffe048df5a
+# Starting compiling Assembly-CSharp.dll
+C:\Monster\Unity3D\UnityEditor\2020.3.13f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-2fe7f590ed959594f8dc24ca96210eeb
