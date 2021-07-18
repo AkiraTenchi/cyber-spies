@@ -42,7 +42,7 @@ const Login = ()=> {
             })
             history.push("/")
         } else{
-            window.alert("Something went wrong, or user does not exist, or passwrod is wrong")
+            window.alert("Something went wrong, or user does not exist, or password is wrong")
             return null;
         }
 
