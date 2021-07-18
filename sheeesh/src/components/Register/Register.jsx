@@ -15,23 +15,6 @@ const Register = ()=> {
         return /\s/g.test(s);
       }
 
-    
-    // check if user exist
-    const usernameExist = async()=>{
-        const res = await fetch("/users/"+Username, 
-        {
-            method: "GET",
-            headers: {"Content-Type": "application/json"}
-        });
-
-        const content = await res.json();
-        
-        if(content.username == Username){
-            return true
-        } else {
-            return false
-        }
-    }
 
     // register functions
     const registerAccount = async (e)=>{
@@ -42,8 +25,16 @@ const Register = ()=> {
             window.alert("No white spaces allowed on username")
             return null;
         }
+        // check if user exist
+        const checkUserExistRes = await fetch("/users/"+Username, 
+        {
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        });
 
-        if(usernameExist(Username)){
+        const UserExistContent = await checkUserExistRes.json();
+        // alert if user does exist
+        if(UserExistContent.username == Username){
             window.alert("username is already taken")
             return null;
         }
@@ -61,7 +52,7 @@ const Register = ()=> {
             "pwd": Password
         }
 
-
+        // register user
         const res = await fetch("/users/", 
         {
             method: "POST",
