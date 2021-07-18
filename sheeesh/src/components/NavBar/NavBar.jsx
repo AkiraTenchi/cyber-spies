@@ -1,8 +1,7 @@
 import React from 'react';
 import { useSelector , useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link, Switch, useHistory} from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import { actionCreators } from '../../state';
 import {Navbar, Nav, Container} from "react-bootstrap";
 import './NavBar.css';
@@ -17,7 +16,7 @@ const NavBar = ()=> {
     const state = useSelector((state)=>state)
     const dispatch = useDispatch()
 
-    const {logout, update} = bindActionCreators(actionCreators, dispatch)
+    const {logout} = bindActionCreators(actionCreators, dispatch)
 
 
     const onLogOut = ()=>{
@@ -45,7 +44,7 @@ const NavBar = ()=> {
                 </Nav>
                 <Nav >
                     <Nav.Link className="redirBtn" href="/referral">Referral Links</Nav.Link>
-                    <Nav.Link className="redirBtn" href="#features">Minigames</Nav.Link>
+                    <Nav.Link className="redirBtn" href="/minigames">Minigames</Nav.Link>
                 </Nav>
                 <Nav >
 

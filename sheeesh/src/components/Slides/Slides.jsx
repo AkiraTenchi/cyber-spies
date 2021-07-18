@@ -1,11 +1,5 @@
 import React from 'react';
-import { useSelector , useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { actionCreators } from '../../state';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import './Slides.css';
-import NavBar from '../NavBar/NavBar';
 import {Carousel} from "react-bootstrap";
 
 
@@ -13,10 +7,6 @@ import {Carousel} from "react-bootstrap";
 
 const Slides = (props)=> {
 
-    const state = useSelector((state)=>state)
-    const dispatch = useDispatch()
-
-    const { update } = bindActionCreators(actionCreators, dispatch)
 
 
     const showItems =()=>{

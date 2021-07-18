@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { useSelector , useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link, Switch, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import './ReferralPage.css';
 import NavBar from '../NavBar/NavBar';
 import Slides from '../Slides/Slides';
