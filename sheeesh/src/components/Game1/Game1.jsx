@@ -12,10 +12,12 @@ const Game1 = ()=>{
 
     const win= ()=>{
         window.open("/rewards", "_blank")
+        window.close();
     }
 
     const lose= ()=>{
         window.open("/", "_blank")
+        window.close();
     }
 
     const checkPoints = (points)=>{
